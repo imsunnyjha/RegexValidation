@@ -7,7 +7,18 @@ namespace RegexValidation
     {
         static void Main(string[] args)
         {
+            int pinCode;
             Console.WriteLine("Let's Validate Pin Code!");
+            string pinPattern = "[0-9]{6}";
+            Console.WriteLine("Enter ZIP Code: ");
+            string pin = Console.ReadLine();
+            if (!Regex.IsMatch(pin, pinPattern))
+                throw new Exception("ZIP Code should be a 6 digit number");
+            else
+            {
+                pinCode = int.Parse(pin);
+                Console.WriteLine(+pinCode + " validated!");
+            }
         }
     }
 }
