@@ -9,7 +9,7 @@ namespace RegexValidation
         {
             int pinCode;
             Console.WriteLine("Let's Validate Pin Code!");
-            string pinPattern = "[0-9]{6}";
+            string pinPattern = "[1-9]{1}[0-9]{5}";
             Console.WriteLine("Enter ZIP Code: ");
             string pin = Console.ReadLine();
             if (!Regex.IsMatch(pin, pinPattern))
