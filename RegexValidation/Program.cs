@@ -22,7 +22,7 @@ namespace RegexValidation
             //EmailId validation
 
             Console.WriteLine("Let's Validate Email ID!");
-            string emailPattern = @"^([a-z][a-z0-9.+_-]*@([a-z0-9]([a-z0-9-]*[a-z0-9])?\.)+[a-z0-9]([a-z0-9-]*[a-z])?)$";
+            string emailPattern = @"^[a-z][a-z0-9.+-]+(\.[a-z0-9]+)?@[a-z0-9]+\.[a-z]{2,}(\.[a-z]{2,})?$";
             Console.WriteLine("Enter Email Id: ");
             string emailid = Console.ReadLine();
             if (!Regex.IsMatch(emailid, emailPattern))
